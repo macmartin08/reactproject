@@ -8,7 +8,7 @@ function Index() {
 	const [beers, setBeer] = useState([]);
 
   useEffect(() => {
-    Axios.get(`https://nodeapifianl.herokuapp.com/api/beers`)
+    Axios.get(`http://nodeapifianl.herokuapp.com/api/beers`)
       .then(result => {
         console.log(result);
         setBeer(result.data);

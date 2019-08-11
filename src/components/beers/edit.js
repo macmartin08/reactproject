@@ -7,7 +7,7 @@ function Edit(props) {
   const [redirect, setRedirect] = useState(false);
 
   useEffect(() => {
-    Axios.get(`https://nodeapifianl.herokuapp.com/api/beers/${props.match.params.id}`)
+    Axios.get(`http://nodeapifianl.herokuapp.com/api/beers/${props.match.params.id}`)
       .then(result =>   setInputs(result.data))
       .catch(err => console.error(err));
   }, [props]);

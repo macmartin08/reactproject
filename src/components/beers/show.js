@@ -5,7 +5,7 @@ function Show(props) {
   const [beer, setBeer] = useState({});
 
   useEffect(() => {
-    Axios.get(`https://nodeapifianl.herokuapp.com/api/beers/${props.match.params.id}`)
+    Axios.get(`http://nodeapifianl.herokuapp.com/api/beers/${props.match.params.id}`)
       .then(result => setBeer(result.data))
       .catch(err => console.error(err));
   }, [props]);

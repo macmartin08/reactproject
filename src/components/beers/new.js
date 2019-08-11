@@ -20,7 +20,7 @@ const [inputs, setInputs] = useState({});
   }
   function handleSubmit(event) {
       event.preventDefault();
-      Axios.post("https://nodeapifianl.herokuapp.com/api/beers",{
+      Axios.post("http://nodeapifianl.herokuapp.com/api/beers",{
         beer: {
           name: inputs.name,
           brand: inputs.brand,

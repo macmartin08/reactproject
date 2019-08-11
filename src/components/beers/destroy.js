@@ -4,7 +4,7 @@ import Axios from "axios";
 
 function Destroy(props) {
   useEffect(() => {
-    Axios.post('https://nodeapifianl.herokuapp.com/api/beers/destroy', { id: props.match.params.id });
+    Axios.post('http://nodeapifianl.herokuapp.com/api/beers/destroy', { id: props.match.params.id });
   }, [props]);
 
   return <Redirect to="/beers" />;
