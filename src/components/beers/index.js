@@ -3,11 +3,12 @@ import { Redirect } from "react-router-dom";
 import Axios from "axios";
 import { Link } from 'react-router-dom';
 
+
 function Index() {
 	const [beers, setBeer] = useState([]);
 
   useEffect(() => {
-    Axios.get(`/api/beers`)
+    Axios.get(`https://nodeapifianl.herokuapp.com/api/beers`)
       .then(result => {
         console.log(result);
         setBeer(result.data);
