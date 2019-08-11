@@ -8,14 +8,7 @@ function Edit(props) {
 
   useEffect(() => {
     Axios.get(`/api/beers/${props.match.params.id}`)
-      .then(result => {
-        console.log(result);
-        setInputs({
-          name: result.data.name,
-          brand: result.data.brand,
-          size: result.data.size
-        });
-      })
+      .then(result =>   setInputs(result.data))
       .catch(err => console.error(err));
   }, [props]);
 
